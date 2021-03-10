@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,900");
+
+* {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: url("../img/mobile-mockup.png") center no-repeat;
+  font-family: "Source Sans Pro", sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+body.-overlay .wrapper:before {
+  background-color: rgba(0, 0, 0, 0.7);
+  content: "";
+  display: block;
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 15;
+}
+
+.wrapper {
+  background-color: #f9f9f9;
+  border-radius: 25px;
+  height: 650px;
+  left: 50%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  top: calc(50% + 4px);
+  transform: translateX(-50%) translateY(-50%);
+  width: 318px;
+}
+
+.head {
+  text-align: center;
+  padding: 40px 30px 20px;
+}
+
+.head h1 {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 40px;
+}
+
+.head p {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 22px;
+}
+
+.menu-button {
+  background-color: #777;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 900;
+  padding: 20px 10px;
+  position: absolute;
+  right: 10px;
+  text-transform: uppercase;
+  top: 10px;
+  transition: background 0.2s ease-in-out;
+  z-index: 10;
+}
+
+.menu-button:hover {
+  background-color: #444;
+}
+
+.menu {
+  align-items: center;
+  background-color: #ccc;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  z-index: 8;
+}
+
+.menu.-active {
+  transform: translateX(0);
+}
+
+.list {
+  font-size: 28px;
+  font-weight: 200;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.list div {
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.list div:hover {
+  text-decoration: underline;
+}
+
+.video {
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.video .video-cover {
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform-origin: center right;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+
+.video .video-cover:hover {
+  transform: scale(1.1);
+}
+
+.video .video-cover.-inactive {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.video .video-player {
+  height: 100%;
+  width: 100%;
+}
+
+.accordion {
+  padding: 20px 10px;
+  background-color: #fff;
+}
+
+/*.accordion .item.-active {
+
+}*/
+
+.accordion .item.-active .description {
+  max-height: 800px;
+}
+
+.accordion .item.-active .title::after {
+  content: "-";
+}
+
+.accordion .item .title {
+  background-color: #f2f2f2;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 8px 0 0;
+  padding: 2px 5px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.accordion .item .title::after {
+  content: "+";
+  position: absolute;
+  right: 10px;
+}
+
+.accordion .item .description {
+  background-color: #f2f2f2;
+  font-size: 16px;
+  font-weight: 200;
+  height: auto;
+  line-height: 26px;
+  margin: 0 0 8px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 5px;
+  position: relative;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.wiki {
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 26px;
+  padding: 20px 10px;
+}
+
+.button-modal {
+  border-radius: 4px;
+  border: 1px solid #666;
+  color: #666;
+  cursor: pointer;
+  display: block;
+  font-weight: 900;
+  margin: 10px auto;
+  padding: 3px 0;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-modal:hover {
+  background-color: #666;
+  color: #fff;
+}
+
+.modal-wiki {
+  bottom: 0;
+  height: 220px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+  visibility: hidden;
+  width: 100%;
+  z-index: 20;
+}
+
+.modal-wiki-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-wiki img {
+  display: block;
+  margin: 0 auto;
+  width: calc(100% - 20px);
+}
+
+.modal-wiki .close-modal {
+  color: #fff;
+  cursor: pointer;
+  font-weight: 900;
+  position: absolute;
+  right: 10px;
+  text-transform: uppercase;
+  top: -30px;
+}
+
+.modal-wiki .close-modal:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste Prodigious - JS</title>
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- <body class="-overlay"> -->
+    <div class="wrapper">
+      <div class="head">
+        <h1>Lorem ipsum dolor sit</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut corporis
+          delectus aliquid omnis nostrum, dignissimos eius ab enim. Aliquid,
+          repellendus.
+        </p>
+        <span id="menu-button" class="menu-button">Menu</span>
+        <div id="menu" class="menu">
+          <!-- <div class="menu -active"> -->
+          <div class="list">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="video">
+          <img
+            src="assets/img/video-cover.png"
+            alt="Video Cover"
+            id="video-cover"
+            class="video-cover"
+          />
+          <!-- <img src="assets/img/video-cover.png" alt="Video Cover" id="video-cover" class="video-cover -inactive"> -->
+          <video
+            controls
+            id="video-player"
+            class="video-player"
+            width="960"
+            height="540"
+          >
+            <source src="assets/video/video.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="accordion">
+          <div class="item">
+            <!-- <div class="item -active"> -->
+            <div class="title">Título 1</div>
+            <div class="description">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
+              corporis voluptatibus, dicta minima consequatur delectus quia ex
+              deserunt perspiciatis ratione.
+            </div>
+          </div>
+          <div class="item">
+            <div class="title">Título 2</div>
+            <div class="description">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
+              corporis voluptatibus, dicta minima consequatur delectus quia ex
+              deserunt perspiciatis ratione.
+            </div>
+          </div>
+          <div class="item">
+            <div class="title">Título 3</div>
+            <div class="description">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
+              corporis voluptatibus, dicta minima consequatur delectus quia ex
+              deserunt perspiciatis ratione.
+            </div>
+          </div>
+          <div class="item">
+            <div class="title">Título 4</div>
+            <div class="description">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
+              corporis voluptatibus, dicta minima consequatur delectus quia ex
+              deserunt perspiciatis ratione.
+            </div>
+          </div>
+        </div>
+        <div id="wiki" class="wiki">
+          <div class="extract">Carregando...</div>
+          <span id="button-modal" class="button-modal">Abrir foto</span>
+        </div>
+      </div>
+      <div class="modal-wiki -active">
+        <!-- <div class="modal-wiki -active"> -->
+        <span class="close-modal" id="close-modal">Fechar</span>
+        <img src="assets/img/albert-einstein.jpg" alt="Albert Einstein" />
+      </div>
+    </div>
+    <script src="assets/js/main.js" async></script>
+  </body>
+</html>
